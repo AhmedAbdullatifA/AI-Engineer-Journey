@@ -16,7 +16,7 @@ This project is a practical application built as part of the **LLM Zoomcamp by D
 
 ## 🛠️ Project Structure
 ```text
-├── PL2026.py          # Main application script
+├── pl-2026.py         # Main application script
 └── README.md          # Documentation
 
 
