@@ -1,4 +1,5 @@
 import os
+import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -54,21 +55,31 @@ Burnley – 38 played, 4 wins, 10 draws, 24 losses, 38 GF, 75 GA, -37 GD, 22 poi
 Wolverhampton Wanderers – 38 played, 3 wins, 11 draws, 24 losses, 27 GF, 68 GA, -41 GD, 20 points (Relegated)
 """
 
-# Main execution block
-if __name__ == "__main__":
-    print("--- Premier League 2025-2026 AI Analyst ---")
-    
-    # Get user question from terminal
-    user_question = input("Enter your question about the Table of the Premier League 2025-2026 season: ")
-    
+# Streamlit UI
+
+# Page config sets the title on the browser tab
+st.set_page_config(page_title="EPL AI Analyst", page_icon="⚽")
+
+# Main titles and headings
+st.title("⚽ Premier League 2025-2026 AI Analyst Table")
+st.caption("Ask anything about the final standings, qualification spots, or team stats!")
+
+# Input text box for the user's question
+user_question = st.text_input(
+    label="Enter your question about the season:",
+    placeholder="e.g., Which teams got relegated? or How many points did Man United get?"
+)
+
+# Button to trigger the AI query
+if st.button("Analyze and Answer"):
     if user_question.strip():
-        # Combine the context table with the user's question
-        final_prompt = f"{PREMIER_LEAGUE_TABLE}\n\nQuestion: {user_question}\n\nAnswer:"
+        # Display a native loading spinner while fetching the response
+        with st.spinner("Analyzing data and thinking..."):
+            final_prompt = f"{PREMIER_LEAGUE_TABLE}\n\nQuestion: {user_question}\n\nAnswer:"
+            ai_response = llm_query(final_prompt)
         
-        print("\nThinking...")
-        ai_response = llm_query(final_prompt)
-        
-        print("\n" + "="*40 + "\nAI Response:\n" + "="*40)
-        print(ai_response)
+        # Display the output inside a nice formatted text box
+        st.subheader("AI Response:")
+        st.info(ai_response)
     else:
-        print("Please enter a valid question.")
+        st.warning("Please type a valid question first!")
