@@ -18,7 +18,7 @@ This project is a practical application built as part of the **LLM Zoomcamp by D
 
 - **Secure Credentials:** Keeps API keys secure using environment variables (`python-dotenv`).
 
-- **The link pf project : https://ahmedabdullatifa-ai-enginee-llm-zoomcampproject-1pl-2026-zeunq5.streamlit.app/
+- The link pf project : https://ahmedabdullatifa-ai-enginee-llm-zoomcampproject-1pl-2026-zeunq5.streamlit.app/
 
 ---
 
