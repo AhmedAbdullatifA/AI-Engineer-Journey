@@ -1,5 +1,5 @@
     # This is a class that represents a football club with attributes for its name, league, and whether it is qualified for the UEFA competition.
-class Clubs :
+class Club :
     # Constructor method to initialize the club's attributes
     def __init__(self, name, league, qualified_to_uefa):
         self.name = name 
@@ -30,13 +30,13 @@ class Clubs :
         self.qualified_to_uefa = qualified_to_uefa
 
 
-c1 = Clubs("Real Madrid", "La Liga", True)
-c2 = Clubs("Manchester United", "Premier League", True)
-c3 = Clubs("Bayern Munich", "Bundesliga", True)
-c4 = Clubs("Juventus", "Serie A", False)
-c5 = Clubs("Paris Saint-Germain", "Ligue 1", True)
-c6 = Clubs("Barcelona", "La Liga", True)
-c7 = Clubs("Ac Milan", "Serie A", True)
+c1 = Club("Real Madrid", "La Liga", True)
+c2 = Club("Manchester United", "Premier League", True)
+c3 = Club("Bayern Munich", "Bundesliga", True)
+c4 = Club("Juventus", "Serie A", False)
+c5 = Club("Paris Saint-Germain", "Ligue 1", True)
+c6 = Club("Barcelona", "La Liga", True)
+c7 = Club("Ac Milan", "Serie A", True)
 
 c4.set_qualified_to_uefa(True)
 c7.set_qualified_to_uefa(False)
