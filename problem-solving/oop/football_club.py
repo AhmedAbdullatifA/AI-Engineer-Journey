@@ -1,4 +1,32 @@
-    # This is a class that represents a football club with attributes for its name, league, and whether it is qualified for the UEFA competition.
+# Football Club Management System
+
+# A simple OOP-based football club management system built to practice **Classes, Objects, Instance Attributes, Instance Methods, Getters, Setters, and Basic Validation** in Python.
+
+# The system uses a `Club` class to represent football clubs and store information such as the club's name, league, and UEFA qualification status. The class provides getter methods to retrieve club information and setter methods to update its attributes.
+
+# The `set_qualified_to_uefa()` method also includes basic validation to ensure that the UEFA qualification status is always a Boolean value.
+
+### Features
+
+# Create football club objects with name, league, and UEFA qualification status.
+# Retrieve club information using getter methods.
+# Update club attributes using setter methods.
+# Validate the UEFA qualification status using `isinstance()`.
+# Create and manage multiple club objects independently.
+# Display each club's information using formatted output.
+
+### OOP Concepts Practiced
+
+# Classes & Objects
+# Constructors (`__init__`)
+# Instance Attributes
+# Instance Methods
+# Getters
+# Setters
+# Basic Validation
+# Boolean Data Types
+# Object State Modification
+
 class Club :
     # Constructor method to initialize the club's attributes
     def __init__(self, name, league, qualified_to_uefa):
