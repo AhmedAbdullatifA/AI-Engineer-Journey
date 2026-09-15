@@ -1,4 +1,4 @@
-# 🟡 Problem 02 — Bank Account
+# Bank Account
 # Create a class called BankAccount that represents a simple bank account.
 
 # The class should contain:

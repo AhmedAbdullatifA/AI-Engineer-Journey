@@ -1,4 +1,4 @@
-# 🟢 Problem 01 — Student Profile
+# Student Profile
 # Create a class called Student that represents a student.
 
 # The class should have:

@@ -1,4 +1,4 @@
-# 🟠 Problem 03 — Library System
+# Library System
 # Create a small library management system using OOP.
 
 # Create a class called Book with:

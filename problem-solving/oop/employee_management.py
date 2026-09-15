@@ -1,4 +1,4 @@
-# 🔴 Problem 04 — Employee & Manager
+#  Employee & Manager
 # Now we're getting into actual OOP concepts. 
 # Create a base class called:
 # Employee
