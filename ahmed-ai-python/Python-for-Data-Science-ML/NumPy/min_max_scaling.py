@@ -31,6 +31,7 @@ def min_max_scale(data):
     scaled = (data - Min) / safe
 
     return scaled
+
 data = np.array([
     [5, 10, 100],
     [5, 20, 200],

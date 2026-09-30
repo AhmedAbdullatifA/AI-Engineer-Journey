@@ -85,7 +85,6 @@ print(top_student_grades)
 
 # 4. Identify the subject with the highest average grade.
 
-high_average_subject = grades[np.argmax(average_subject)]
 print("The subject with the highest average grade is :")
 print(grades[:,np.argmax(average_subject)])
 
