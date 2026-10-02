@@ -98,8 +98,14 @@ library = Library()
 library.add_book(book1)
 library.add_book(book2)
 library.add_book(book3)
+
+
+
 # some testing
 library.display_books()
+
+
+
 # title : Clean Code
 # author : Robert C. Martin
 # status : Available
@@ -109,14 +115,30 @@ library.display_books()
 # title : old man and the sea
 # author : Ernest Hemingway
 # status : Available
+
+
+
 library.borrow_book("Clean Code")
 library.borrow_book("Clean Code")
+
 # The book 'Clean Code' is already borrowed.
+
+
+
 library.borrow_book("The Pragmatic Programmer")
+
 # The book 'The Pragmatic Programmer' does not exist in the library.
+
+
+
 library.return_book("The Pragmatic Programmer")
+
 # The book 'The Pragmatic Programmer' does not exist in the library.
+
+
+
 library.display_books()
+
 # title : Clean Code
 # author : Robert C. Martin
 # status : Borrowed
@@ -126,8 +148,12 @@ library.display_books()
 # title : old man and the sea
 # author : Ernest Hemingway
 # status : Available
+
+
+
 library.return_book("Clean Code")
 library.display_books()
+
 # title : Clean Code
 # author : Robert C. Martin
 # status : Available
@@ -137,8 +163,12 @@ library.display_books()
 # title : old man and the sea
 # author : Ernest Hemingway
 # status : Available
+
+
+
 library.borrow_book("old man and the sea")
 library.display_books()
+
 # title : Clean Code
 # author : Robert C. Martin
 # status : Available
