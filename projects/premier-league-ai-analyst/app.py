@@ -16,7 +16,7 @@ def llm_query(prompt: str) -> str:
     """Sends the prompt to Llama 3.1 via Groq and returns the response."""
     try:
         response = groq_client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model="openai/gpt-oss-20b",
             messages=[
                 {
                     "role": "user",
@@ -58,10 +58,10 @@ Wolverhampton Wanderers – 38 played, 3 wins, 11 draws, 24 losses, 27 GF, 68 GA
 # Streamlit UI
 
 # Page config sets the title on the browser tab
-st.set_page_config(page_title="EPL AI Analyst", page_icon="⚽")
+st.set_page_config(page_title="EPL AI Analyst")
 
 # Main titles and headings
-st.title("⚽ Premier League 2025-2026 AI Analyst Table")
+st.title("Premier League 2025-2026 AI Analyst Table")
 st.caption("Ask anything about the final standings, qualification spots, or team stats!")
 
 # Input text box for the user's question
