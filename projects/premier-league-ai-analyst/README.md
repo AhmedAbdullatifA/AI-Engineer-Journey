@@ -10,8 +10,9 @@ The application uses **Streamlit** for the user interface and the **Groq API** w
 
 ## 🚀 Live Demo
 
-**Streamlit App:**
-[Open the Premier League AI Analyst]([https://ahmedabdullatifa-ai-enginee-llm-zoomcampproject-1pl-2026-zeunq5.streamlit.app/](https://3ucnt9cnock9gsn7ab3cuw.streamlit.app/))
+**Streamlit App:**  
+[Open the Premier League AI Analyst](https://3ucnt9cnock9gsn7ab3cuw.streamlit.app/)
+
 
 ---
 
