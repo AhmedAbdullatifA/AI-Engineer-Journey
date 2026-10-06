@@ -1,7 +1,7 @@
-# 🔴 Missing Data Impact Analyzer
-# 🧩 Problem Name:
+# Missing Data Impact Analyzer
+# Problem Name:
 # Missing Data Sensitivity Test
-# 📄 Description:
+# Description:
 # do two strategies.
 # First :
 # Drop rows with missing values → calculate mean.
@@ -102,17 +102,37 @@ df = pd.DataFrame(d)
 
 
 if __name__ == "__main__":
+    print("Dataset before missing data analysis:")
+    print(df)
+
+    print("\nMean comparison after drop vs fill:")
     print(missing_data_impact_analyzer_mean(df))
 
+    print("\nStandard Deviation comparison after drop vs fill:")
     print(missing_data_impact_analyzer_std(df))
 
 
-# output =>    
-#              Age        Salary
-# drop_mean   30.0  43333.333333
-# fill_mean   30.0  43333.333333
-# difference   0.0      0.000000
 
+# output =>    
+# Dataset before missing data analysis:
+#     Age   Salary
+# 0  25.0  50000.0
+# 1  30.0      NaN
+# 2   NaN  20000.0
+# 3  20.0  60000.0
+# 4  35.0  70000.0
+# 5  40.0  50000.0
+# 6   NaN      NaN
+# 7   NaN      NaN
+# 8   NaN  10000.0
+
+# Mean comparison after drop vs fill:
+#                 Age        Salary
+# drop_nan_mean  30.0  43333.333333
+# fill_nan_mean  30.0  43333.333333
+# difference      0.0      0.000000
+
+# Standard Deviation comparison after drop vs fill:
 #                    Age        Salary
 # drop_nan_std  7.905694  23380.903889
 # fill_nan_std  5.590170  18484.227511

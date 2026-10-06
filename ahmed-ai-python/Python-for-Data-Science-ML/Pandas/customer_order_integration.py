@@ -1,7 +1,7 @@
-# 🟡 Orders & Customers Merge
-# 🧩 Problem Name:
+#  Orders & Customers Merge
+#  Problem Name:
 # Customer Order Integration
-# 📄 Description:
+#  Description:
 # Given:
 # customers DataFrame
 # orders DataFrame
@@ -60,10 +60,27 @@ orders = {
 
 
 
+
 if __name__ == "__main__":
+    print("Customers Data before merge:")
+    print(customers)
+
+    print("\nOrders Data before merge:")
+    print(orders)
+
+    print("\nThe data after merging customers and orders:")
     print(customer_order_integration(customers, orders))
 
+
 # Output = >
+# Customers Data before merge:
+# {'CustomerID': [1, 2, 3, 4, 5], 'Name': ['Ahmed', 'Sara', 'Omar', 'Laila', 'Hassan']}
+
+# Orders Data before merge:
+# {'OrderID': range(101, 111), 'CustomerID': array([4, 5, 3, 5, 5, 2, 3, 3, 3, 5]), 
+# 'Amount': array([199, 971, 763, 230, 761, 408, 869, 443, 591, 513], dtype=int32)}
+
+# The data after merging customers and orders:
 #    CustomerID    Name  total_spending
 # 0           1   Ahmed             0.0
 # 1           2    Sara           408.0

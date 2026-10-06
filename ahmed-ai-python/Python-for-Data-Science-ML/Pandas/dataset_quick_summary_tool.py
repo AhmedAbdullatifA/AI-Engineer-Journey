@@ -1,7 +1,7 @@
-# 🟡 Dataset Summary Analyzer
-# 🧩 Problem Name:
+# Dataset Summary Analyzer
+# Problem Name:
 # Dataset Quick Summary Tool
-# 📄 Description:
+# Description:
 # Create a Pandas script that:
 # Loads a CSV file.
 # Prints:
@@ -21,7 +21,7 @@ def quick_summary(file):
     """
     df = pd.read_csv(file)
 
-    print("📊 Dataset Summary")
+    print(" Dataset Summary")
 
     print(f"Number of rows is : {df.shape[0]} and columns is  :{df.shape[1]}")
 
@@ -43,15 +43,20 @@ df = {
 }
 
 df = pd.DataFrame(df)
-print(df)
 
 # Writing to CSV
 df.to_csv("customers.csv", index=False)
 
 if __name__ == "__main__" :
+    print("Customers Data before writing to CSV:")
+    print(df)
+
+    print("\nDataset Summary after calculations:")
     quick_summary("customers.csv")
 
+
 # output =>
+# Customers Data before writing to CSV:
 #     customer_id  region  amount
 # 0             1  Helwan    9011
 # 1             2    Alex    1264
@@ -103,19 +108,21 @@ if __name__ == "__main__" :
 # 47           48    Giza    9386
 # 48           49   Maddi    1655
 # 49           50   Maddi    8361
-# 📊 Dataset Summary
+
+# Dataset Summary after calculations:
+#  Dataset Summary
 # Number of rows is : 50 and columns is  :3
 # Data types of each column are : 
-# customer_id    int64
-# region           str
-# amount         int64
+# customer_id     int64
+# region         object
+# amount          int64
 # dtype: object
-# Number of missing values per column is :
+# Number of missing values per column is :  
 # customer_id    0
 # region         0
 # amount         0
 # dtype: int64
-# Basic statistics for numerical columns is :
+# Basic statistics for numerical columns is : 
 #        customer_id       amount
 # count     50.00000    50.000000
 # mean      25.50000  5336.780000
@@ -124,5 +131,4 @@ if __name__ == "__main__" :
 # 25%       13.25000  2952.000000
 # 50%       25.50000  5114.500000
 # 75%       37.75000  7681.500000
-
 # max       50.00000  9730.000000

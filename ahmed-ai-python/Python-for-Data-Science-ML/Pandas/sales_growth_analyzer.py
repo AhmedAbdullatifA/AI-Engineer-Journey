@@ -1,7 +1,7 @@
-# 🟡 Sales Growth Analyzer
-# 🧩 Problem Name:
+# Sales Growth Analyzer
+# Problem Name:
 # Monthly Sales Growth Calculator
-# 📄 Description:
+# Description:
 # Given a Pandas Series of monthly sales:
 # Calculate month-over-month growth percentage.
 # Identify the month with highest growth.
@@ -45,8 +45,42 @@ sales_series = pd.Series(sales, index=months, name="Sales")
 print(sales_series)
 
 if __name__ == "__main__":
+    print("Monthly Sales Data before growth analysis:")
+    print(sales_series)
+
+    print("\nSales Growth Analysis Results:")
     print(sales_growth_analyzer(sales_series))
 
+# output =>
+# 1     25795
+# 2     10860
+# 3     86820
+# 4     64886
+# 5     16265
+# 6     92386
+# 7     47194
+# 8     97498
+# 9     54131
+# 10    70263
+# 11    26023
+# 12    51090
+# Name: Sales, dtype: int32
+# Monthly Sales Data before growth analysis:
+# 1     25795
+# 2     10860
+# 3     86820
+# 4     64886
+# 5     16265
+# 6     92386
+# 7     47194
+# 8     97498
+# 9     54131
+# 10    70263
+# 11    26023
+# 12    51090
+# Name: Sales, dtype: int32
+
+# Sales Growth Analysis Results:
 # {'monthly_growth_percent': 1            NaN
 # 2     -57.898818
 # 3     699.447514
@@ -59,7 +93,7 @@ if __name__ == "__main__":
 # 10     29.801777
 # 11    -62.963437
 # 12     96.326327
-# Name: Sales, dtype: float64, 'highest_growth_month': np.int64(3), 'negative_growth_months': 2    -57.898818 
+# Name: Sales, dtype: float64, 'highest_growth_month': np.int64(3), 'negative_growth_months': 2    -57.898818
 # 4    -25.263764
 # 5    -74.932959
 # 7    -48.916503

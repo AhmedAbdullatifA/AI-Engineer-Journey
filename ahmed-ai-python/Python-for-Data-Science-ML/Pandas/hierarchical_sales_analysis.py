@@ -1,7 +1,7 @@
-# 🔴 Multi-Level Aggregation Engine
-# 🧩 Problem Name:
+# Multi-Level Aggregation Engine
+# Problem Name:
 # Hierarchical Sales Analysis
-# 📄 Description:
+# Description:
 # Group by region and product.
 # Compute:
 # total revenue
@@ -55,12 +55,51 @@ df = pd.DataFrame(d)
 
 
 if __name__ == "__main__":
+    print("Sales Data before hierarchical analysis:")
+    print(df)
+
+    print("\nHierarchical Sales Summary after calculations:")
     print(hierarchical_sales_analysis(df))
 
 
+
 # output =>    
+# Sales Data before hierarchical analysis:
+#     Region product  Amount
+# 0     Alex     PS5    5986
+# 1   Madiaa     PS4    7599
+# 2     Giza     PS4    1275
+# 3   Madiaa     PS5    8726
+# 4   Madiaa     PS4    3652
+# 5   Helwan  Tablet    2085
+# 6     Giza      TV    4443
+# 7     Giza     PS5    8055
+# 8     Giza      TV    3573
+# 9   Madiaa  Labtop    1521
+# 10    Alex  Tablet    4343
+# 11    Giza      PC    8489
+# 12  Madiaa  Tablet    7373
+# 13  Helwan     PS5    6175
+# 14    Alex      PC     661
+# 15  Helwan  Labtop    4797
+# 16    Alex     PS5    1495
+# 17  Madiaa   Phone    8129
+# 18   Cairo      TV    9967
+# 19    Alex  Labtop    1516
+# 20  Helwan      TV    8369
+# 21  Madiaa     PS4    6939
+# 22    Alex   Phone    8392
+# 23   Cairo   Phone    7363
+# 24   Cairo  Labtop    8416
+# 25    Giza   Phone    9029
+# 26    Giza      PC    1378
+# 27  Helwan   Phone    9768
+# 28    Alex      TV    5387
+# 29    Alex      TV    5359
+
+# Hierarchical Sales Summary after calculations:
 #                 total_revenue  average_revenue  num_revenue
-# Region product
+# Region product                                             
 # Alex   TV               10746      5373.000000            2
 #        Phone             8392      8392.000000            1
 #        PS5               7481      3740.500000            2

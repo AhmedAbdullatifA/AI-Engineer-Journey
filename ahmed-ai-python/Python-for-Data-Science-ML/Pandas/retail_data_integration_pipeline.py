@@ -1,7 +1,7 @@
-# 🔴 Multi-Table Business Join
-# 🧩 Problem Name:
+# Multi-Table Business Join
+# Problem Name:
 # Retail Data Integration Pipeline
-# 📄 Description:
+# Description:
 # Given:
 # customers
 # orders
@@ -88,9 +88,56 @@ orders = pd.DataFrame({
 
 
 if __name__ == "__main__":
-    print(retail_data_integration_pipeline(customers, orders , products))
+    print("Customers Data before merge:")
+    print(customers)
+
+    print("\nOrders Data before merge:")
+    print(orders)
+
+    print("\nProducts Data before merge:")
+    print(products)
+
+    print("\nRetail Data Integration Pipeline Results:")
+    print(retail_data_integration_pipeline(customers, orders, products))
+
 
 # Output = >
+# Customers Data before merge:
+#    CustomerID     Name
+# 0           1    Ahmed
+# 1           2     Sara
+# 2           3     Omar
+# 3           4    Laila
+# 4           5   Hassan
+# 5           6   Fatima
+# 6           7  Youssef
+
+# Orders Data before merge:
+#     OrderID  CustomerID  ProductID  Quantity
+# 0      1001           7        104         4
+# 1      1002           4        104         2
+# 2      1003           5        103         2
+# 3      1004           7        102         1
+# 4      1005           3        101         4
+# 5      1006           5        102         1
+# 6      1007           5        104         1
+# 7      1008           7        104         3
+# 8      1009           2        102         3
+# 9      1010           3        102         3
+# 10     1011           7        102         2
+# 11     1012           3        104         4
+# 12     1013           3        104         4
+# 13     1014           5        101         4
+# 14     1015           4        101         4
+
+# Products Data before merge:
+#    ProductID ProductName     Category  Price
+# 0        101      Laptop  Electronics    800
+# 1        102       Phone  Electronics    500
+# 2        103      Tablet  Electronics    300
+# 3        104  Headphones  Accessories    100
+
+# Retail Data Integration Pipeline Results:
 # Revenue per customer:
 #    CustomerID  total_revenue
 # 0           1            0.0
@@ -113,6 +160,4 @@ if __name__ == "__main__":
 # 3           4         3400.0
 # 6           7         2200.0
 # 1           2         1500.0
-
-
 
