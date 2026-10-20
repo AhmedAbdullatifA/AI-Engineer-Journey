@@ -1,5 +1,5 @@
 model,accuracy,macro_f1,recall_negative,recall_neutral,recall_positive
-Logistic Regression,0.8203,0.5684,0.4051,0.2301,0.9725
-Logistic Regression (balanced),0.7706,0.5976,0.5759,0.4885,0.8428
-Random Forest,0.7848,0.3857,0.1392,0.0248,0.9957
-Random Forest (balanced),0.8097,0.5588,0.4473,0.2159,0.9552
+Logistic Regression,0.821,0.5701,0.4135,0.2283,0.9725
+Logistic Regression (balanced),0.7704,0.5974,0.5738,0.4903,0.8425
+Random Forest,0.7832,0.3794,0.1287,0.0248,0.9951
+Random Forest (balanced),0.7865,0.3908,0.1498,0.0248,0.9966

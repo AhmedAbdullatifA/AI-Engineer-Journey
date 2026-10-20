@@ -117,17 +117,17 @@ Results on the held-out test set (4,525 reviews). TF-IDF is fitted on the traini
 
 | Metric          | Logistic Regression | Logistic Regression (balanced) | Random Forest | Random Forest (balanced) |
 | --------------- | ------------------- | ------------------------------ | ------------- | ------------------------ |
-| Accuracy        | 82.03%              | 77.06%                         | 78.48%        | 80.97%                   |
-| Macro F1-score  | 0.57                | 0.60                           | 0.39          | 0.56                     |
-| Negative Recall | 0.41                | 0.58                           | 0.14          | 0.45                     |
-| Neutral Recall  | 0.23                | 0.49                           | 0.02          | 0.22                     |
-| Positive Recall | 0.97                | 0.84                           | 1.00          | 0.96                     |
+| Accuracy        | 82.10%              | 77.04%                         | 78.32%        | 78.65%                   |
+| Macro F1-score  | 0.57                | 0.60                           | 0.38          | 0.39                     |
+| Negative Recall | 0.41                | 0.57                           | 0.13          | 0.15                     |
+| Neutral Recall  | 0.23                | 0.49                           | 0.02          | 0.02                     |
+| Positive Recall | 0.97                | 0.84                           | 1.00          | 1.00                     |
 
 ![Confusion matrices](docs/figures/confusion_matrices.png)
 
 ### Interpretation
 
-Plain Logistic Regression has the highest accuracy, but it finds only 41% of Negative and 23% of Neutral reviews. Random Forest almost always predicts Positive. Class weights trade accuracy for minority-class recall: balanced Logistic Regression has the best Macro F1 (0.60) and Negative recall (0.58). Neutral (3-star) reviews are mostly predicted as Positive. The models were compared on one fixed test split, so confirm the final choice with cross-validation.
+Plain Logistic Regression has the highest accuracy, but it finds only 41% of Negative and 23% of Neutral reviews. Random Forest almost always predicts Positive, and class weights barely change that. Class weights help Logistic Regression: the balanced version has the best Macro F1 (0.60) and Negative recall (0.57), at the cost of accuracy. Neutral (3-star) reviews are mostly predicted as Positive. The models were compared on one fixed test split, and exact numbers can vary slightly across machines and library versions, so confirm the final choice with cross-validation.
 
 ## 🔎 Customer Complaint Clustering
 
@@ -135,17 +135,17 @@ K-Means divides the 2,369 negative reviews into five groups. The themes below ar
 
 | Cluster | Reviews | Interpreted Theme            | Top terms                                              |
 | ------- | ------- | ---------------------------- | ------------------------------------------------------ |
-| 0       | 420     | Appearance mismatch          | back, like, looks, looked, going, look, fabric         |
-| 1       | 202     | Boxy or short fit            | shirt, would, back, fabric, boxy, like, short          |
-| 2       | 569     | Sizing issues                | top, small, size, would, ordered, fit, large           |
-| 3       | 743     | Fabric and material quality  | quality, fabric, material, cheap, sweater, thin, price |
-| 4       | 435     | Dress-related disappointment | dress, like, fabric, would, really, disappointed       |
+| 0       | 544     | Appearance mismatch          | like, looked, looks, look, back, fabric, cheap         |
+| 1       | 191     | Boxy or short fit            | shirt, back, would, fabric, boxy, like, loved          |
+| 2       | 428     | Dress-related disappointment | dress, like, would, fabric, back, disappointed         |
+| 3       | 735     | Fabric and material quality  | quality, fabric, return, would, even, pants, thin      |
+| 4       | 471     | Sizing issues                | top, small, size, ordered, would, fit, large           |
 
 ### Key Finding
 
-Fabric and material quality (cluster 3) is the largest complaint group with 743 reviews (about 31% of the 2,369 negative reviews), followed by sizing issues (cluster 2) with 569. The cluster names are interpretive labels, not manually verified ground-truth categories.
+Fabric and material quality (cluster 3) is the largest complaint group with 735 reviews (about 31% of the 2,369 negative reviews), followed by appearance mismatch (544) and sizing issues (471). The cluster names are interpretive labels, not manually verified ground-truth categories. Cluster numbers can change between runs.
 
-**Caution:** silhouette scores for k = 2–8 are all very low (about 0.004–0.007; 0.0063 for k = 5), so the clusters overlap and should be treated as exploratory themes, not sharply separated groups.
+**Caution:** silhouette scores for k = 2–8 are all very low (about 0.004–0.008; 0.0062 for k = 5), so the clusters overlap and should be treated as exploratory themes, not sharply separated groups.
 
 ![Negative reviews by product category](docs/figures/negative_reviews_by_category.png)
 
@@ -182,7 +182,7 @@ ai-customer-feedback-intelligence-system/
 │   └── figures/          # metrics, cluster summary and confusion matrices are written here
 └── docs/
     ├── Project_Report.docx / .pdf
-    ├── Presentation_Complete.pptx / .pdf
+    ├── Presentation_Project.pptx / .pdf
     └── figures/
 ```
 
@@ -196,8 +196,8 @@ ai-customer-feedback-intelligence-system/
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd ai-customer-feedback-intelligence-system
+git clone https://github.com/AhmedAbdullatifA/AI-Engineer-Journey.git
+cd AI-Engineer-Journey/projects/ai-customer-feedback-intelligence-system
 ```
 
 ### 2. Create a virtual environment
